@@ -1,8 +1,43 @@
 # Interview PDF Review
 
-一个用于复盘面试 PDF 的 Codex Skill，针对面试猫等产品导出的面试记录进行了优化。
+一个用于复盘面试 PDF 的 Agent Skill，针对面试猫等产品导出的面试记录进行了优化。目录采用 `SKILL.md` 结构，可用于 Codex，也可用于支持 Agent Skills 的 Claude 环境。
 
 它会从原始问答中提取证据，检查项目介绍是否具备有效的 STAR 结构，诊断回答中的内容与表达问题，生成不虚构经历的升级答案，并给出可执行的训练计划。
+
+## 直接安装或下载
+
+- **仓库地址：** <https://github.com/Grace-Wang0625/interview_skill>
+- **ZIP 直接下载：** <https://github.com/Grace-Wang0625/interview_skill/archive/refs/heads/main.zip>
+
+### 在 Codex 中一句话安装
+
+把下面这句话发给 Codex：
+
+```text
+请从这个 GitHub 仓库安装 interview-pdf-review Skill：
+https://github.com/Grace-Wang0625/interview_skill
+安装完成后告诉我如何调用。
+```
+
+如果当前 Codex 环境不能自动安装，可以下载 ZIP，解压后把文件夹放到个人 Codex Skills 目录，并开启一个新对话让 Skill 被重新发现。
+
+### 在 Claude Code 中一句话安装
+
+把下面这句话发给 Claude Code：
+
+```text
+请把这个 GitHub 仓库安装为用户级 Agent Skill：
+https://github.com/Grace-Wang0625/interview_skill
+将它放到 ~/.claude/skills/interview-pdf-review，并检查 SKILL.md 是否可发现。
+```
+
+如果只想给当前项目使用，把目标位置改为：
+
+```text
+.claude/skills/interview-pdf-review
+```
+
+Claude 网页版能否直接安装自定义 Skill 取决于账号和工作区是否提供 Skills 管理功能。若界面支持上传 Skill，可使用上面的 ZIP 直链下载后上传；没有该入口时，请使用 Claude Code。
 
 ## 什么时候使用
 
